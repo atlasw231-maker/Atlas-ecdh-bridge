@@ -1,0 +1,13 @@
+{
+    "name": "atlas-ecdh-bridge",
+    "image": "mcr.microsoft.com/devcontainers/rust:1-bullseye",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "rust-lang.rust-analyzer",
+                "tamasfe.even-better-toml"
+            ]
+        }
+    },
+    "postCreateCommand": "cargo build"
+}
