@@ -1,0 +1,35 @@
+[package]
+name = "atlas-ecdh-bridge"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.70"
+authors = ["Atlas Contributors"]
+description = "Derive deterministic Ed25519 signing keys from WebAuthn/Passkey P-256 ECDH — zero persistent secrets, hardware-bound identity"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/AresArcadia/atlas-ecdh-bridge"
+homepage = "https://github.com/AresArcadia/atlas-ecdh-bridge"
+documentation = "https://docs.rs/atlas-ecdh-bridge"
+keywords = ["ed25519", "passkey", "ecdh", "webauthn", "p256"]
+categories = ["cryptography", "authentication"]
+readme = "README.md"
+
+[dependencies]
+ed25519-dalek = { version = "2.1", features = ["zeroize"] }
+p256 = "0.13"
+sha2 = "0.10"
+hkdf = "0.12"
+zeroize = { version = "1.7", features = ["derive"] }
+bs58 = "0.5"
+hex = "0.4"
+
+[[example]]
+name = "fixed_point"
+path = "examples/fixed_point.rs"
+
+[[example]]
+name = "derive_addresses"
+path = "examples/derive_addresses.rs"
+
+[[example]]
+name = "sign_and_verify"
+path = "examples/sign_and_verify.rs"
